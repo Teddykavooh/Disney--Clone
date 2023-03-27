@@ -2,7 +2,7 @@ let movies = [
   {
     name: 'Falcon and the Winter Soldier',
     des: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus architecto quia nemo provident, amet dolorum.',
-    image: 'images/slider 1.PNG',
+    image: 'images/slider 2.PNG',
   },
   {
     name: 'Loki',
@@ -47,6 +47,7 @@ const createSlide = () => {
   p.appendChild(document.createTextNode(movies[slideIndex].des));
   content.appendChild(h1);
   content.appendChild(p);
+  slide.appendChild(content);
   slide.appendChild(imgElement);
   carousel.appendChild(slide);
 
@@ -103,7 +104,7 @@ cardContainers.forEach((item, i) => {
     item.scrollLeft += containerWidth - 200;
   });
 
-  nxtBtns[i].addEventListener('click', () => {
+  preBtns[i].addEventListener('click', () => {
     item.scrollLeft -= containerWidth + 200;
   });
 });
